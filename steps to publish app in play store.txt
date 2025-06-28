@@ -1,0 +1,38 @@
+<publish Android App in play Store 'powerd by ali lotfy'>
+-------------------------------------------------------------
+*************************************************************
+1- prepare privacy policy link => free website (https://app.freeprivacypolicy.com/wizard/privacy-policy#step-4).
+then save privacy policy as textFile or any thing and put it in (gitHup) for example to be public.
+*********************
+2-change App name(android/app/main/androidMainfest)
+*****************
+3-App Icon website(https://www.appicon.co/).upload your app iconImage.then(android/app/source/main/res)replace folders.[flutter clean,flutter pub get,flutter run].
+*************************************
+4- App screen shoots (2-8)images.
+*************************
+5-change App Id (android/app/buildgradel)=>both[nameSpace & applicationId] ex:'com.lotfy.appName'
+ for kotlin(src/main/kotlin/com.example/main.Activity)=>'com.lotfy.appName'.
+*****************
+6-got to (https://docs.flutter.dev/deployment/android) to sign the app
+  ---------
+. Create a file named [project]/android/key.properties
+storePassword=password-from-previous-step
+keyPassword=password-from-previous-step
+keyAlias=upload
+storeFile=keystore-file-location
+  -------------
+.in cmd run and complete this until get the path(
+keytool -genkey -v -keystore $env:USERPROFILE\upload-keystore.jks `
+        -storetype JKS -keyalg RSA -keysize 2048 -validity 10000 `
+        -alias upload
+)
+then drag drop file in folder (app) in my project and write its path in  above (keystore-file-location) replace with path. 
+
+**********************************
+7-got to (https://docs.flutter.dev/deployment/android) to sign the (android/app/build.gradle)
+************
+8-create (aap)android app pundle use[flutter build appbundle --release] the file locate in (app/output/bundle/release/)
+--------------------------
+9-go to google play console to create and release the app.
+
+
