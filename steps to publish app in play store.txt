@@ -7,6 +7,7 @@ then save privacy policy as textFile or any thing and put it in (gitHup) for exa
 2-change App name(android/app/main/androidMainfest)
 *****************
 3-App Icon website(https://www.appicon.co/).upload your app iconImage.then(android/app/source/main/res)replace folders.[flutter clean,flutter pub get,flutter run].
+  note: use ImageResizer to crate a (1024*500)image ,(512*512)-> also this is created before in res folders while change icon.
 *************************************
 4- App screen shoots (2-8)images.
 *************************
